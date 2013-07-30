@@ -1,0 +1,43 @@
+<migrate-config>	
+
+	<migrate-types>
+		<migrate-type name="jdbc_query">
+			<reader class="org.yubing.datmv.olap.type.QueryReader" />
+			<reader-constructor-arg-parser
+				class="org.yubing.datmv.config.xml.parser.argment.JdbcReaderConstructorArgParser" />
+		</migrate-type>
+		
+		<migrate-type name="jdbc_count_query">
+			<reader class="org.yubing.datmv.olap.type.aggregation.JdbcCountQueryReader" />
+			<reader-constructor-arg-parser 
+				class="org.yubing.datmv.config.xml.parser.argment.JdbcReaderConstructorArgParser" />
+		</migrate-type>
+
+		<migrate-type name="jdbc_sum_query">
+			<reader class="org.yubing.datmv.olap.type.aggregation.JdbcSummationQueryReader" />
+			<reader-constructor-arg-parser 
+				class="org.yubing.datmv.config.xml.parser.argment.JdbcReaderConstructorArgParser" />
+		</migrate-type>
+		
+		<migrate-type name="jdbc_average_query">
+			<reader class="org.yubing.datmv.olap.type.aggregation.JdbcAverageQueryReader" />
+			<reader-constructor-arg-parser 
+				class="org.yubing.datmv.config.xml.parser.argment.JdbcReaderConstructorArgParser" />
+		</migrate-type>
+		
+	</migrate-types>
+	
+	<!-- 注册数据域映射处理器 -->
+	<mapping-handlers>
+		<mapping-handler name="measure_config">
+			<handler class="org.yubing.datmv.olap.handler.MeasureConfigMappingHandler" />
+			<constructor-arg-parser
+				class="org.yubing.datmv.olap.config.MeasureConfigMappingHandlerArgmentsParser" />
+		</mapping-handler>
+		
+		<mapping-handler name="as_number">
+			<handler class="org.yubing.datmv.olap.handler.NumberFormatMappingHandler" />
+		</mapping-handler>
+	</mapping-handlers>
+	
+</migrate-config>
