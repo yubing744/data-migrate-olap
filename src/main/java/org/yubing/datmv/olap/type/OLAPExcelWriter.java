@@ -15,7 +15,7 @@ public class OLAPExcelWriter extends ExcelWriter {
 		super(outputStream);
 	}
 
-	protected Size writeDataField(DataField dataField, int colNum, int rowNum, boolean transpose)
+	public Size writeDataField(DataField dataField, int colNum, int rowNum, boolean transpose)
 			throws RowsExceededException, WriteException {
 		Size size = new Size(0, 0);
 		
