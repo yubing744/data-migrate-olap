@@ -41,7 +41,16 @@ public class JdbcQueryReader extends JdbcReader {
 		
 		if ("sql".equals(type)) {
 			baseSqlArgs = new ArrayList<Object>();
-			baseSql = handleSqlRefVal(context.getAttributeMap(), sql, baseSqlArgs);
+			Map<String, Object> model = new HashMap<String, Object>();
+			
+			for (Iterator it = context.getParameterMap().entrySet().iterator(); it.hasNext();) {
+				Entry entry = (Entry) it.next();
+				model.put((String)entry.getKey(), entry.getValue());
+			}
+			
+			model.putAll(context.getAttributeMap());
+			
+			baseSql = handleSqlRefVal(model, sql, baseSqlArgs);
 		}
 		
 		conditions = new HashMap<String, Object>();
