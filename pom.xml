@@ -39,6 +39,19 @@
 	</distributionManagement>
 
 
+	<distributionManagement>
+		<repository>
+			<id>Elanding Maven Repo</id>
+			<name>Elanding Maven Repo-releases</name>
+			<url>http://repo.elanding.cn/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>Elanding Maven Repo</id>
+			<name>Elanding Maven Repo-snapshots</name>
+			<url>http://repo.elanding.cn/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
