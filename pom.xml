@@ -3,7 +3,7 @@
 
 	<groupId>org.yubing</groupId>
 	<artifactId>data-migrate-olap</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>data-migrate-olap</name>
@@ -11,7 +11,7 @@
         
         <scm>
             <developerConnection>scm:git:https://gitcafe.com/wcw/data-migrate-olap.git</developerConnection>
-          <tag>data-migrate-olap-1.1.0</tag>
+          <tag>HEAD</tag>
   </scm>
 
 	<repositories>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>org.yubing</groupId>
 			<artifactId>data-migrate</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.1</version>
 		</dependency>
 		
 	</dependencies>
